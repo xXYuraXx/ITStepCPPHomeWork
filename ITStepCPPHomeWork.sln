@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HW_3_Switch", "HW_3_Switch\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FP_HW_07_Цикли", "FP_HW_07_Цикли\FP_HW_07_Цикли.vcxproj", "{1A56347A-B28C-46AF-A68B-78A6017A61E9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FP_HW_07_Цикли_Additional", "FP_HW_07_Цикли_Additional\FP_HW_07_Цикли_Additional.vcxproj", "{6969714F-2287-4039-B1D0-236D23F20BD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{1A56347A-B28C-46AF-A68B-78A6017A61E9}.Release|x64.Build.0 = Release|x64
 		{1A56347A-B28C-46AF-A68B-78A6017A61E9}.Release|x86.ActiveCfg = Release|Win32
 		{1A56347A-B28C-46AF-A68B-78A6017A61E9}.Release|x86.Build.0 = Release|Win32
+		{6969714F-2287-4039-B1D0-236D23F20BD3}.Debug|x64.ActiveCfg = Debug|x64
+		{6969714F-2287-4039-B1D0-236D23F20BD3}.Debug|x64.Build.0 = Debug|x64
+		{6969714F-2287-4039-B1D0-236D23F20BD3}.Debug|x86.ActiveCfg = Debug|Win32
+		{6969714F-2287-4039-B1D0-236D23F20BD3}.Debug|x86.Build.0 = Debug|Win32
+		{6969714F-2287-4039-B1D0-236D23F20BD3}.Release|x64.ActiveCfg = Release|x64
+		{6969714F-2287-4039-B1D0-236D23F20BD3}.Release|x64.Build.0 = Release|x64
+		{6969714F-2287-4039-B1D0-236D23F20BD3}.Release|x86.ActiveCfg = Release|Win32
+		{6969714F-2287-4039-B1D0-236D23F20BD3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
