@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <Windows.h>
 #include <cmath>
 
 using namespace std;
@@ -7,9 +6,6 @@ using namespace std;
 const int SIZE_M = 5;
 const string END_TASK_TEXT = "==================================";
 const string END_MINI_TASK_TEXT = "------------------";
-
-bool isSimple(int n);
-void printSimpleNumbers(int left, int right);
 
 bool isSimple(int n) {
 	if (n < 2) return false;
@@ -120,10 +116,8 @@ void multMatrixByNum(int a[][SIZE_M], int num) {
 
 int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-
 	printSimpleNumbers(3, 12);
+	cout << endl;
 	printSimpleNumbers(7, 19);
 
 	cout << END_TASK_TEXT << endl;
