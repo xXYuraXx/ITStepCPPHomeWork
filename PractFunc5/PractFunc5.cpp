@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void printArr(const int arr[], const int SIZE) {
+void fillArr(const int arr[], const int SIZE) {
 	for (int i = 0; i < SIZE; ++i) {
 		cout << arr[i] << " ";
 	}
@@ -34,13 +34,13 @@ int main()
 
 	const int SIZE = 5;
 	int arr[SIZE] = { 5, 7, 4, 12, 45 };
-	printArr(arr, SIZE);
+	fillArr(arr, SIZE);
 	rewriteArr(arr, SIZE);
-	printArr(arr, SIZE);
+	fillArr(arr, SIZE);
 	increaseArr(arr, SIZE / 2, 1);
-	printArr(arr, SIZE);
+	fillArr(arr, SIZE);
 	increaseArr(arr + SIZE / 2, SIZE / 2 + 1, -1);
-	printArr(arr, SIZE);
+	fillArr(arr, SIZE);
 
 
 }

@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PractFunc4", "PractFunc4\Pr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Багатовимірні_Масиви", "Багатовимірні_Масиви\Багатовимірні_Масиви.vcxproj", "{1708B6A5-49DA-4D20-8B7A-1D15D391EA89}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Перевантажені функції. Передача масиву у функції", "Перевантажені функції. Передача масиву у функції\Перевантажені функції. Передача масиву у функції.vcxproj", "{9B2126EE-DE66-4EAA-A176-0762363AC8FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{1708B6A5-49DA-4D20-8B7A-1D15D391EA89}.Release|x64.Build.0 = Release|x64
 		{1708B6A5-49DA-4D20-8B7A-1D15D391EA89}.Release|x86.ActiveCfg = Release|Win32
 		{1708B6A5-49DA-4D20-8B7A-1D15D391EA89}.Release|x86.Build.0 = Release|Win32
+		{9B2126EE-DE66-4EAA-A176-0762363AC8FD}.Debug|x64.ActiveCfg = Debug|x64
+		{9B2126EE-DE66-4EAA-A176-0762363AC8FD}.Debug|x64.Build.0 = Debug|x64
+		{9B2126EE-DE66-4EAA-A176-0762363AC8FD}.Debug|x86.ActiveCfg = Debug|Win32
+		{9B2126EE-DE66-4EAA-A176-0762363AC8FD}.Debug|x86.Build.0 = Debug|Win32
+		{9B2126EE-DE66-4EAA-A176-0762363AC8FD}.Release|x64.ActiveCfg = Release|x64
+		{9B2126EE-DE66-4EAA-A176-0762363AC8FD}.Release|x64.Build.0 = Release|x64
+		{9B2126EE-DE66-4EAA-A176-0762363AC8FD}.Release|x86.ActiveCfg = Release|Win32
+		{9B2126EE-DE66-4EAA-A176-0762363AC8FD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
