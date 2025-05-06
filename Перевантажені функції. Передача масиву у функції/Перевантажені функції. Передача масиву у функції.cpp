@@ -79,12 +79,12 @@ double TriangleArea(double a, double h) {
 	return area;
 }
 
-int indFirst(const int arr[], int size) {
+int minusIdxFirst(const int arr[], int size) {
 	for (int i = 0; i < size; ++i) {
 		if (arr[i] < 0) return i;
 	}
 }
-int indLast(const int arr[], int size) {
+int minusIdxLast(const int arr[], int size) {
 	for (int i = size-1; i >= 0; --i) {
 		if (arr[i] < 0) return i;
 	}
@@ -157,8 +157,8 @@ int main()
 	int arr2[SIZE_ARR2];
 	fillArray(arr2, SIZE_ARR2, 100, 50);
 	printArray(arr2, SIZE_ARR2);
-	int left = indFirst(arr2, SIZE_ARR2);
-	int right = indLast(arr2, SIZE_ARR2);
+	int left = minusIdxFirst(arr2, SIZE_ARR2);
+	int right = minusIdxLast(arr2, SIZE_ARR2);
 	reversePartArray(arr2, left, right);
 	printArray(arr2, SIZE_ARR2);
 

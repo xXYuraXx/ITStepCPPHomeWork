@@ -49,13 +49,13 @@ void printArray(const int arr[], int size) {
         cout << arr[i] << " ";
     cout << endl;
 }
-int indFirst(const int arr[], int size) {
+int minusIdxFirst(const int arr[], int size) {
     for (int i = 0; i < size; ++i) {
         if (arr[i] < 0) return i;
     }
     return -1;
 }
-int indLast(const int arr[], int size) {
+int minusIdxLast(const int arr[], int size) {
     for (int i = size - 1; i >= 0; --i) {
         if (arr[i] < 0) return i;
     }
@@ -63,8 +63,8 @@ int indLast(const int arr[], int size) {
 }
 template<typename T>
 void sort_between_minus(T arr, int size) {
-    int idxF = indFirst(arr, size);
-    int idxL = indLast(arr, size);
+    int idxF = minusIdxFirst(arr, size);
+    int idxL = minusIdxLast(arr, size);
     if (idxF != -1) {
         bubble_sort(arr + idxF, (idxL + 1) - idxF);
     }
