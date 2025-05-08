@@ -26,7 +26,10 @@ int main()
     float* num2 = new float(5.63f);
     char* num3 = new char('a');
     double mult = (*num2) * (*num1) * (*num3);
-    cout << "Multy of 3 dynamic var: " << mult << endl;
+    cout << "Val1: " << *num1 << endl;
+    cout << "Val2: " << *num2 << endl;
+    cout << "Val3: " << *num3 << " (or " << *num3 * 1 << ")";
+    cout << "\nMulty of 3 dynamic var: " << mult << endl;
 
     int* arr;
     int n;
