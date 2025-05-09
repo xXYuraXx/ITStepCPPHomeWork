@@ -34,6 +34,7 @@ void Print_matrix(int** matrix, int n, int m) {
         cout << endl;
     }
 }
+
 int** Create_matrix(int n, int m) {
     int** matrix = new int* [n];
     for (int i = 0; i < n; ++i) {
@@ -41,9 +42,11 @@ int** Create_matrix(int n, int m) {
     }
     return matrix;
 }
+
 int Get_rand_num(int randMax = 100, int randMin = 0) {
     return (rand() % (randMax + 1 - randMin)) + randMin;
 }
+
 void Fill_matrix(int** matrix, int n, int m, int randMax = 100, int randMin = 0) {
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
@@ -51,10 +54,12 @@ void Fill_matrix(int** matrix, int n, int m, int randMax = 100, int randMin = 0)
         }
     }
 }
+
 int* Create_arr(int size) {
     int* arr = new int[size];
     return arr;
 }
+
 void Fill_arr(int* arr, int size, int randMax = 100, int randMin = 0) {
     for (int i = 0; i < size; ++i) {
         arr[i] = Get_rand_num(randMax, randMin);
@@ -82,6 +87,11 @@ void Remove_row_matrix_by_pos(int**& matrix, int& n, int m, int n_pos) {
     matrix = new_matrix;
     n--;
 }
+
+void Remove_row_matrix_start(int**& matrix, int& n, int m) {
+    Remove_row_matrix_by_pos(matrix, n, m, 0);
+}
+
 void Add_col_matrix_by_pos(int**& matrix, int n, int& m, int m_pos) {
     int** new_matrix = Create_matrix(n, m + 1);
 
@@ -95,10 +105,15 @@ void Add_col_matrix_by_pos(int**& matrix, int n, int& m, int m_pos) {
         }
     }
 
-    delete[] matrix;
+    Delete_matrix(matrix, n, m);
     matrix = new_matrix;
     m++;
 }
+
+void Add_col_matrix_start(int**& matrix, int n, int &m) {
+    Add_col_matrix_by_pos(matrix, n, m, 0);
+}
+
 void Add_row_matrix_start(int**& matrix, int& n, int m) {
     int** new_matrix = Create_matrix(n + 1, m);
     new_matrix[0] = Create_arr(m);
@@ -110,12 +125,7 @@ void Add_row_matrix_start(int**& matrix, int& n, int m) {
     matrix = new_matrix;
     n++;
 }
-void Remove_row_matrix_start(int**& matrix, int& n, int m) {
-    Remove_row_matrix_by_pos(matrix, n, m, 0);
-}
-void Add_col_matrix_start(int**& matrix, int n, int &m) {
-    Add_col_matrix_by_pos(matrix, n, m, 0);
-}
+
 
 
 
