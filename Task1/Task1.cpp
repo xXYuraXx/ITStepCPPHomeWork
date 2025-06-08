@@ -58,7 +58,7 @@ public:
         ofstream outFile(filename);
         if (!outFile.is_open()) {
             cout << "Error opening file!" << endl;
-            return;
+            return; 
         }
         outFile << x << " " << y << " " << z << endl;
         outFile.close();

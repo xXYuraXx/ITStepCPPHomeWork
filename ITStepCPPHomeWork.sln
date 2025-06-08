@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dynamic_arrays", "Dynamic_a
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Structs", "Structs\Structs.vcxproj", "{7B777944-D10C-4604-8746-D9F66D912919}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Structs_funtions", "Structs_funtions\Structs_funtions.vcxproj", "{B5EFA318-9F80-454A-9B70-05C6921CD316}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -151,8 +153,19 @@ Global
 		{7B777944-D10C-4604-8746-D9F66D912919}.Release|x64.Build.0 = Release|x64
 		{7B777944-D10C-4604-8746-D9F66D912919}.Release|x86.ActiveCfg = Release|Win32
 		{7B777944-D10C-4604-8746-D9F66D912919}.Release|x86.Build.0 = Release|Win32
+		{B5EFA318-9F80-454A-9B70-05C6921CD316}.Debug|x64.ActiveCfg = Debug|x64
+		{B5EFA318-9F80-454A-9B70-05C6921CD316}.Debug|x64.Build.0 = Debug|x64
+		{B5EFA318-9F80-454A-9B70-05C6921CD316}.Debug|x86.ActiveCfg = Debug|Win32
+		{B5EFA318-9F80-454A-9B70-05C6921CD316}.Debug|x86.Build.0 = Debug|Win32
+		{B5EFA318-9F80-454A-9B70-05C6921CD316}.Release|x64.ActiveCfg = Release|x64
+		{B5EFA318-9F80-454A-9B70-05C6921CD316}.Release|x64.Build.0 = Release|x64
+		{B5EFA318-9F80-454A-9B70-05C6921CD316}.Release|x86.ActiveCfg = Release|Win32
+		{B5EFA318-9F80-454A-9B70-05C6921CD316}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46BA284D-6725-4A8E-8436-A99A3AD0E896}
 	EndGlobalSection
 EndGlobal
