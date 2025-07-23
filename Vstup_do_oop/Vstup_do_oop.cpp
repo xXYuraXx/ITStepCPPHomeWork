@@ -29,9 +29,8 @@ struct PIB
         cout << "Enter lastname: ";
         getline(cin, this->lastname);
     }
-
-
 };
+
 struct Date
 {
     int day;
