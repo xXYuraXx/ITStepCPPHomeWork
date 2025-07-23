@@ -207,7 +207,7 @@ public:
 		return count_abonents;
 	}
 
-	Abonent Fill() {
+	Abonent& Fill() {
 		PIB new_PIB;
 		cin.ignore();
 		cout << "== Abonent info ==\n";
@@ -289,7 +289,7 @@ public:
 	~PhoneBook() {
 		delete[] abonents;
 	}
-	int GetIdxAbonentByName(string name) {
+	int GetIdxAbonentByName(const string& name) const {
 		int idx = -1;
 		for (unsigned int i = 0; i < countAbonent; ++i) {
 			if (abonents[i].get_PIB().to_string().compare(name) == 0) {
@@ -300,7 +300,7 @@ public:
 		return idx;
 	}
 
-	int GetIdxAbonentByPhone(string phone) {
+	int GetIdxAbonentByPhone(const string& phone) const {
 		int idx = -1;
 		for (unsigned int i = 0; i < countAbonent; ++i) {
 			if (abonents[i].get_home_phone() == phone || abonents[i].get_mobile_phone() == phone) {
@@ -319,7 +319,7 @@ public:
 		return &abonents[idx];
 	}
 
-	void Add(Abonent a) {
+	void Add(const Abonent& a) {
 		Abonent* temp_abonents = new Abonent[countAbonent + 1];
 		
 		for (unsigned int i = 0; i < countAbonent; ++i) {
@@ -332,7 +332,7 @@ public:
 		abonents = temp_abonents;
 	}
 
-	void Delete(string phone) {
+	void Delete(const string& phone) {
 		int idx_to_delete = GetIdxAbonentByPhone(phone);
 		if (idx_to_delete == -1) {
 			cout << "Can't find phone " << phone << "!\n";
@@ -354,8 +354,8 @@ public:
 		abonents = temp_abonents;
 
 	}
-	void SearchByName(string name) const {}
-	void SearchByPhone(string phone) const {}
+	void SearchByName(const string& name) const {}
+	void SearchByPhone(const string& phone) const {}
 	void ShowAll() const {
 		if (countAbonent <= 0) return;
 		
@@ -380,14 +380,14 @@ void AbonentDeleteByPhoneMenu(PhoneBook &phonebook) {
 	phonebook.Delete(phone);
 }
 
-void AbonentPrintByIdx(PhoneBook& phonebook, int idx) {
+void AbonentPrintByIdx(const PhoneBook& phonebook, int idx) {
 	Abonent* a = phonebook.GetAbonentByIdx(idx);
 	cout << SEP_STR;
 	a->Print();
 	cout << SEP_STR;
 }
 
-void AbonentSearchByNameMenu(PhoneBook& phonebook) {
+void AbonentSearchByNameMenu(const PhoneBook& phonebook) {
 	cout << "Enter name (PIB) to search abonent: ";
 	cin.ignore();
 	string name;
@@ -400,7 +400,7 @@ void AbonentSearchByNameMenu(PhoneBook& phonebook) {
 	AbonentPrintByIdx(phonebook, idx);
 }
 
-void AbonentSearchByPhoneMenu(PhoneBook& phonebook) {
+void AbonentSearchByPhoneMenu(const PhoneBook& phonebook) {
 	cout << "Enter phone number to search abonent: ";
 	cin.ignore();
 	string phone;
@@ -439,6 +439,10 @@ void LoadAbonentFromFileMenu(PhoneBook& phonebook) {
 	phonebook.Add(a);
 }
 
+void AbonentPrintCount() {
+	cout << "Abonent count: " << Abonent::GetAbonentCount() << " (Counted by static var)\n";
+}
+
 
 
 int main()
@@ -448,12 +452,13 @@ int main()
 
 	phonebook.Add({ {"Name", "Name2", "Name3"}, "+123", "+223", "Info"});
 	phonebook.Add({ {"Test", "Test2", "Test3"}, "+999", "+888", "InfoInfoInfoInfo"});
-	cout << "Abonent count: " << Abonent::GetAbonentCount() << " (Counted by static var)\n";
+	
 
 	Menu my_menu;
 	my_menu.set_menu_header_text(PROJECT_NAME);
 	my_menu.addOption("Add abonent", [&phonebook]() { phonebook.Add(Abonent().Fill()); });
 	my_menu.addOption("Show all", [&phonebook]() { phonebook.ShowAll(); });
+	my_menu.addOption("Print count abonents", [&phonebook]() { AbonentPrintCount(); });
 	my_menu.addOption("Delete by phone", [&phonebook]() { AbonentDeleteByPhoneMenu(phonebook); });
 	my_menu.addOption("Search by name (PIB)", [&phonebook]() { AbonentSearchByNameMenu(phonebook); });
 	my_menu.addOption("Save abonent to file", [&phonebook]() { SaveAbonentToFileMenu(phonebook); });
