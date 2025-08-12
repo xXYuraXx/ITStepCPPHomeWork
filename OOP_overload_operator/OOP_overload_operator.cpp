@@ -23,6 +23,11 @@ public:
 	const static int SECONDS_IN_DAY = 86400;
 
 	void setTime(int h, int m, int s) {
+		if ((h >= 24 || m >= 60 || s >= 60) || (h < 0 || m < 0 || s < 0)) {
+			cout << "Error: Invalid time values" << endl;
+			return;
+		}
+		
 		hours = h;
 		minutes = m;
 		seconds = s;
@@ -31,6 +36,7 @@ public:
 		if (s < 0) {
 			s = SECONDS_IN_DAY + s;
 		}
+		s = s % SECONDS_IN_DAY;
 		hours = s / 3600;
 		minutes = (s % 3600) / 60;
 		seconds = s % 60;
@@ -69,7 +75,7 @@ public:
 	}
 	Time operator/(const Time& other) const {
 		if (other.getTimeInSeconds() == 0) {
-			cout << "Error: Division by zero." << endl;
+			cout << "Error: Division by zero" << endl;
 			return Time(0);
 		}
 		int totalSeconds = this->getTimeInSeconds() / other.getTimeInSeconds();
